@@ -11,6 +11,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,34 +1,19 @@
 {
   "posts": [
     {
-      "nome": "Leonardo",
-      "mensagem": "Esta postagem foi atualizada!",
+      "nome": "Leonardo Mendes",
+      "mensagem": "Primeira Mensagem",
+      "id": 1
+    },
+    {
+      "nome": "Leo",
+      "mensagem": "Nova Mensagem",
       "id": 2
     },
     {
-      "id": 3,
-      "nome": "Carlos",
-      "mensagem": "Esta é minha primeira postagem!"
-    },
-    {
-      "id": 4,
-      "nome": "Gabriel",
-      "mensagem": "Esta é uma nova postagem!"
-    },
-    {
-      "id": 5,
-      "nome": "Pedro",
-      "mensagem": "Texto novo!"
-    },
-    {
-      "nome": "Teste 2",
-      "mensagem": "Teste Teste Teste",
-      "id": 7
-    },
-    {
-      "nome": "Nova Mensagem",
-      "mensagem": "Teste Novamente",
-      "id": 8
+      "nome": "Luana",
+      "mensagem": "É incrivelmente linda",
+      "id": 3
     }
   ]
 }

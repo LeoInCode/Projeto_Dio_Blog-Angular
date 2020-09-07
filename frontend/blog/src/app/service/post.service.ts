@@ -16,9 +16,13 @@ export class PostService {
   postMensagem(post: Post) {
     return this.http.post('http://localhost:3000/posts', post)
   }
-/*
-  deletePost(delete: Post) {
-    return this.http.delete('http://localhost:3000/posts', delete)
+
+  putMensagem(id: number, put: Post) {
+    return this.http.put('http://localhost:3000/posts/' + id, put)
   }
-*/
+
+  deletePost(id: number) {
+    return this.http.delete('http://localhost:3000/posts/' + id)
+  }
+
 }
