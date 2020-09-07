@@ -11,7 +11,7 @@ O blog foi criado usando Json-server para fazer o back-end, e para o front foi u
 - AngularJS
 
 ---
-### :fa-code: Execução
+### Execução
 1. Rodar o servidor dentro da pasta backend
 ```javascript
 npm start
