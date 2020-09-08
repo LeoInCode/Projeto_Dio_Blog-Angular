@@ -1,7 +1,7 @@
 export class Post{
   
   public id: number
-  public nome: string
-  public mensagem: string
+  public nome: String
+  public mensagem: String
 
 }

@@ -26,17 +26,21 @@
         <h3 class="text-center mb-4 text-monospace">Digite abaixo os seus comentários:</h3>
 
         <div class="form-group">
+          <label for="nome" class="text-monospace">Id:</label>
+          <input [(ngModel)]='post.id' [value]="post.id" type="number" name="id" id="id" class="form-control" placeholder="Digite o id somente se deseja atualizar um comentário">
+        </div>
+        <div class="form-group">
           <label for="nome" class="text-monospace">Nome:</label>
-          <input [(ngModel)]='post.nome'type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome"
-           >
+          <input [(ngModel)]='post.nome' [value]="post.nome" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome">
         </div>
         <div class="form-group">
           <label for="mensagem" class="text-monospace">Mensagem:</label>
           <textarea name="mensagem" id="mensagem" cols="30" rows="4" class="form-control"
-            placeholder="Digite a sua mensagem" [(ngModel)]='post.mensagem'></textarea>
+            placeholder="Digite a sua mensagem" [value]="post.mensagem" [(ngModel)]='post.mensagem'></textarea>
         </div>
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-outline-info w-25" (click)='cadastrarMensagem()'>Publicar</button>
+          <button type="button" class="btn btn-outline-info w-25 mr-2" (click)='atualizarMensagem()'>Atualizar</button>
+          <button type="button" class="btn btn-info w-25" (click)='cadastrarMensagem()'>Publicar</button>
         </div>
 
       </div>
@@ -52,7 +56,7 @@
             <p class="card-text">{{post.nome}}</p>
             <p class="card-text">{{post.mensagem}}</p>
             <div class="col-sm-12 text-right">
-              <button type="button" class="btn btn-primary mr-2 w-20" (click)='editarMensagem()'>Editar</button>
+              <button type="button" class="btn btn-primary mr-2 w-20" (click)='atualizarCampos(post.id,post.nome,post.mensagem)'>Editar</button>
               <button type="button" class="btn btn-danger w-20" (click)='deletarMensagem(post.id)'>Excluir</button>
             </div>
           </div>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../service/post.service';
 import { Post } from '../model/Post';
+import { faTheRedYeti } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-feed',
@@ -11,7 +12,7 @@ export class FeedComponent implements OnInit {
 
   listPost: Post[];
   post: Post = new Post;
-  nome: String;
+  name: String;
   findPosts: Post[];
  
   constructor(private postService: PostService) { }
@@ -28,28 +29,34 @@ export class FeedComponent implements OnInit {
   }  
 
   set findPost(name: String) {
-    this.nome = name
+    this.name = name
     this.findPosts = this.listPost.filter((post: Post) =>
-      post.nome.toLocaleLowerCase().indexOf(this.nome.toLocaleLowerCase()) > -1)
+      post.nome.toLocaleLowerCase().indexOf(this.name.toLocaleLowerCase()) > -1)
   } 
 
   get findPost() { 
-    return this.nome;
+    return this.name;
 }
 
   cadastrarMensagem() {
-    this.postService.postMensagem(this.post).subscribe((data: Post) => {
+      this.postService.postMensagem(this.post).subscribe((data: Post) => {
+        this.post = data
+        location.assign('/feed')
+      })
+  }
+
+  atualizarCampos(id: number, nome: String, mensagem: String) { 
+    this.post.id = id
+    this.post.nome = nome
+    this.post.mensagem = mensagem
+  }
+
+  atualizarMensagem() {
+    this.postService.putMensagem(this.post.id,this.post).subscribe((data: Post) => {
       this.post = data
       location.assign('/feed')
     })
-  }
-
-  editarMensagem(id: number) { 
-    this.postService.putMensagem(id, this.post).subscribe((data: Post) => {
-      this.post = data
-
-    })
-  }
+}
 
   deletarMensagem(id: number) {
     this.postService.deletePost(id).subscribe((data: Post[]) => {
