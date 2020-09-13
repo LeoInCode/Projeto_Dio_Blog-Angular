@@ -17,7 +17,7 @@ O blog foi criado usando Json-server para fazer o back-end, e para o front foi u
 ```javascript
 npm start
 ```
-1. Rodar o front-end dentro da pasta frontend/blog/
+2. Rodar o front-end dentro da pasta frontend/blog/
 ```javascript
 ng serve -o
 ```
