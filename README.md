@@ -8,7 +8,8 @@ O blog foi criado usando Json-server para fazer o back-end, e para o front foi u
 ### 🚀 Ferramentas
 - NodeJS
 - Json-server
-- AngularJS
+- Angular
+- Bootstrap 4
 
 ---
 ### Execução
