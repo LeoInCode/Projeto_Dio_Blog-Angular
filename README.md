@@ -1,4 +1,4 @@
-# Projeto Dio: Desenvolvendo um blog com as tecnologias de JavaScript e Angular
+# Projeto Dio: Desenvolvendo um blog com as tecnologias de Java e Angular
 ### Sobre
 Projeto foi criado a partir da aula "Desenvolvendo seu blog com as tecnologias de Java e Angular", do DioLabs, na [Digital Innovation One](https://digitalinnovation.one/ "Digital Innovation One")
 
